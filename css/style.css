@@ -1,0 +1,255 @@
+@charset "utf-8";
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+
+html {
+  font-size: 62.5%; /* 16px × 62.5% = 10px */
+}
+body {
+    color: #222222;
+    font-family: "Open Sans", 'ヒラギノ角ゴ ProN W3', Hiragino Kaku Gothic ProN, "メイリオ", Meiryo, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.75em;
+    justify-content: center;
+    background-repeat: no-repeat;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.3rem 0 1rem;
+    padding-top: 1rem;
+}
+header img {
+    max-width: 60%;
+    height: auto;
+    vertical-align: middle;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form {
+    width: 90%;
+}
+.form-row,
+#form .add-upd {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0.3rem;
+}
+#ingredients-name,
+#ingredients-quantity,
+#ingredients-category {
+    width: 70%;
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 1rem 0;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+}
+.button > div {
+    width: 150px;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: #963296;
+    color: white;
+    transition: background-color 0.3s;
+}
+.button > div:hover {
+    background-color: rgb(250, 130, 250);
+    opacity: 0.8;
+}
+.add-upd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+.add-upd button {
+    width: 150px;
+    font-size: 1.4rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: #963296;
+    color: white;
+}
+.hidden {
+    display: none;
+}
+.button > div:not(.hidden) {
+    display: block;
+}
+
+#list {
+    width: 90%;
+    margin: 0 auto;
+}
+.filter {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+#category-options {
+    width: 70%;
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 1rem 0;
+}
+.list-wrap {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+}
+.list-head {
+    display: grid;
+    grid-template-columns: 30% 24% 14% 32%;
+    border-bottom: 0.1rem solid #963296;
+}
+.list-cell {
+    margin: 0.1rem;
+    word-wrap: break-all;
+    word-break: break-word;
+    white-space: normal;
+    display: flex;
+    align-items: center;
+    padding: 0.3rem;
+}
+.list-body {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.list-row {
+    display: grid;
+    grid-template-columns: 30% 24% 14% 32%;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 0.1rem dashed #963296;
+    word-wrap: break-word;
+    margin-top: 0;
+}
+.list-row:first-child {
+    margin-top: 1rem;
+}
+.list-success {
+    background-color: #fa82fa;
+}
+.text-muted {
+    color: #ffffff;
+}
+#add-button,
+#update-button,
+#clearTableBtn {
+    margin-bottom: 0.5rem;
+}
+.pointer {
+    cursor: pointer;
+}
+img {
+    margin: 0 0.2rem;
+    padding: 0.2rem;
+}
+#clearListBtn.hidden {
+    display: none;
+}
+.share {
+    display: flex;
+    justify-content: center;
+}
+.container {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin: 0 auto;
+}
+.circle {
+    fill: none;
+    stroke: #222222;
+    stroke-width: 5px;
+    stroke-dasharray: 40;
+    transition: all 0.2s ease-in-out;
+    animation: outWaveOut 1s cubic-bezier(0.42, 0.0, 0.58, 1.0) forwards;
+}
+.social {
+    color: #222222;
+    font-size: 1.8em;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+.container:hover {
+    cursor: pointer;
+}
+.container:hover .circle {
+    fill: #ffffff;
+    fill-opacity: 1;
+    animation: outWaveIn 1s cubic-bezier(0.42, 0.0, 0.58, 1.0) forwards;
+}
+.twitter:hover .circle {
+    animation-name: colorTwitter, outWaveIn;
+}
+.facebook:hover .circle {
+    animation-name: colorFacebook, outWaveIn;
+}
+
+@keyframes colorTwitter {
+    from {
+        stroke: #222222;
+    }
+    to {
+        stroke: #3aaae1;
+    }
+}
+@keyframes colorFacebook {
+    from {
+        stroke: #222222;
+    }
+    to {
+        stroke: #3b5998;
+    }
+}
+@keyframes outWaveIn {
+    to {
+        stroke-width: 10px;
+        stroke-dasharray: 400;
+    }
+}
+@keyframes outWaveOut {
+    from {
+        stroke-width: 10px;
+        stroke-dasharray: 400;
+    }
+    to {
+        stroke: #222222;
+        stroke-width: 5px;
+        stroke-dasharray: 40;
+    }
+}
+#footer {
+    text-align: center;
+    padding: 2rem;
+}
+@media (max-width: 767px) {
+    #footer p {
+        font-size: 3vw;
+    }
+}

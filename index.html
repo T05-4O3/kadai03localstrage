@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head prefix="og: https://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="PantryPal">
+    <meta name="keywords" content="食材買い出しの時のメモ帳">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PantryPal">
+    <meta property="og:description" content="食材買い出しの時のメモ帳">
+    <meta property="og:url" content="http://observation.jp/t05_4o3_m/pantrypal/index.html">
+    <meta property="og:image" content="http://observation.jp/t05_4o3_m/pantrypal/img/common/ogimage.jpg">
+    <meta property="og:site_name" content="買い忘れない？">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="買い忘れない？" />
+    <meta name="twitter:title" content="買い忘れない？" />
+    <meta name="twitter:image" content="http://observation.jp/t05_4o3_m/photomemo/img/common/ogimage.jpg" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-YyT4g4KD4vZyyaEONf7lQTwikW8Sv7g1zNmTJH9dXYGzy8+ziZhhxhM1iqcq7f2/rpg8uV7+2tGJfX7CjZI8eA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>買い忘れない？</title>
+</head>
+
+<body>
+    <header>
+        <img src="./img/main/pantrypal.png" alt="買い忘れない？">
+    </header>
+
+    <main>
+        <div class="button">
+        <div id="hideBtn">入力欄を非表示</div>
+        <div id="showBtn" class="hidden">入力欄を表示</div>
+        </div>
+
+        <form id="form">
+        <div class="form-row">
+            <input type="text" id="ingredients-name" placeholder="なにを？">
+        </div>
+        <div class="form-row">
+            <input type="text" id="ingredients-quantity" placeholder="どのくらい？">
+        </div>
+        <div class="form-row">
+            <select id="ingredients-category">
+            <option value="売り場を選択" selected>売り場を選択</option>
+            <option value="野菜/果物">野菜/果物</option>
+            <option value="肉類">肉類</option>
+            <option value="魚介類">魚介類</option>
+            <option value="乳製品">乳製品</option>
+            <option value="惣菜/デリ">惣菜/デリ</option>
+            <option value="ベーカリー">ベーカリー</option>
+            <option value="缶詰類">缶詰類</option>
+            <option value="調味料類">調味料類</option>
+            <option value="冷凍食品">冷凍食品</option>
+            <option value="飲料/酒">飲料/酒</option>
+            <option value="日用品">日用品</option>
+            <option value="医薬品">医薬品</option>
+            <option value="化粧品">化粧品</option>
+            <option value="その他">その他</option>
+            </select>
+        </div>
+        <div class="add-upd">
+            <input type="hidden" id="ingredients-id">
+            <button onclick="addNewIngredients()" type="button" id="add-button">リストに追加</button>
+            <button onclick="saveEditedIngredients()" type="button" id="update-button" style="display: none;">更新</button>
+        </div>
+        </form>
+
+        <div id="list">
+        <div class="filter">
+            <select id="category-options"></select>
+        </div>
+        <div class="list-wrap">
+            <div class="list-head">
+            <div class="list-cell" scope="col">買うもの</div>
+            <div class="list-cell" scope="col">売り場</div>
+            <div class="list-cell" scope="col">量</div>
+            <div class="list-cell" scope="col"></div>
+            </div>
+            <div id="ingredients-list" class="list-body"></div>
+            <div id="incart-list" class="list-body list-success text-muted"></div>
+        </div>
+        </div>
+
+        <div class="button">
+        <div id="clearListBtn" class="hidden">お遣い完了！</div>
+        </div>
+
+        <div id="share-buttons">
+        <div class="share">
+            <a href="https://twitter.com/share?url=http://observation.jp/t05_4o3_m/pantrypal/index.html&via=yohsuke_itoh&hashtags=買い出し" rel="nofollow noopener" target="_blank" class="container twitter">
+            <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 200 200" class="circle">
+                <circle cx="100" cy="100" r="50" />
+            </svg>
+            <div class="social">
+                <i class="fa fa-twitter"></i>
+            </div>
+            </a>
+            <a href="http://www.facebook.com/share.php?u=http://observation.jp/t05_4o3_m/pantrypal/index.html" target="_blank" class="container facebook">
+            <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 200 200" class="circle">
+                <circle cx="100" cy="100" r="50" />
+            </svg>
+            <div class="social">
+                <i class="fa fa-facebook"></i>
+            </div>
+            </a>
+        </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <p>copyrights 2023 Observation.jp All RIghts Reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+    </body>
+
+</html>
