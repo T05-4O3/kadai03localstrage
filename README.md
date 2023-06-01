@@ -16,11 +16,7 @@ G’sAcademy課題03 Local Strage PantryPal
 - トライしてみたかったこと：本やネット、その他から撮影したレシピをリストに追加できる機能も入れてみたかった
 ## ④質問・疑問・感想、シェアしたいこと等なんでも
 - [質問]：日本語の読み取り精度が高くてJSだけで動くOCRってTesseract.jsのみでしょうか？調べきれていませんが、ChatAIに画像を投げて読み取ってもらうとかも既にあるのでしょうか・・・
-- [感想]：利用シーンを自分で想定し、使ってみて
-- [感想]：疲れた
-- [tips]：部分部分で整理して作っていけると、ChatGPTとの対話で作っていくことがしやすい。ので、JSももっと理解できないとと感じた。（前回と同じ）
-- [参考記事]：<https://hackernoon.com/how-to-create-rock-paper-scissors-spock-lizard-in-javascript-991k36hy>
-- [参考記事]：https://codepen.io/
-- [参考記事]：https://kodocode.net/design-css-modal/
-- [参考記事]：https://tech.brick-plan.jp/accordion/accordion-pattern14/
-- 
+- [感想]：利用シーンを自分で想定し、使ってみての繰り返しから、これで使ってみてもらえるかな？で周囲に使ってみてもらってフィードバックすることと、実際にデプロイしてから起こる想定外の挙動の調整が大事だと改めて実感
+- [tips]：
+- [参考記事]：<https://poruruba.github.io/utilities/>
+- [参考記事]：https://codepen.io/ 
