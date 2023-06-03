@@ -26,4 +26,5 @@ G’sAcademy課題03 Local Strage PantryPal
 - [tips]：
 - [参考記事]：<https://poruruba.github.io/utilities/>
 - [参考記事]：<https://codepen.io/>
+- https://github.com/naptha
 - [参考記事]:<https://github.com/naptha>
